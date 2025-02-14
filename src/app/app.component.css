@@ -5,24 +5,34 @@ header {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 14px;
-    font-family: "Poppins, sans-serif";
     z-index: 3000;
     width: 100%;
     position: fixed;
     top: 0;
 }
 
+.icon-title{
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 li {
     margin-inline: 12px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .remain {
     padding-top: 74px
 }
 
-
 .mobile-header {
     display: none;
+}
+
+.desactive-mobile-nav {
+    display:none;
 }
 
 @media (max-width: 768px) {
@@ -54,18 +64,33 @@ li {
         padding: 10px 0;
     }
 
-    .mobile-menu ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .active-mobile-nav{
+        display: block;
+       flex: 1; 
+       position: absolute;
+       top: 64px;
+       padding-top: 8px;
+       padding-bottom: 8px;
+       z-index: 3000;
+       background-color: white;
+       width: 100%;
     }
 
-    .mobile-menu li {
-        padding: 10px;
-        text-align: center;
+    li{
+        font-weight: 400;
+        font-size: 14px;
     }
 
-    .mobile-menu li:hover {
-        background-color: rgba(255, 255, 255, 0.2);
+    .mobile-menu-item{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .mobile-menu-item:hover{
+        color: #16a34a;
+    }
+
+    .mobile-item-bar{
+        border-bottom: gray solid 1px;
     }
 }

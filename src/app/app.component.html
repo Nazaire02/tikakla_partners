@@ -1,5 +1,5 @@
 <header class="desktop-header flex items-center justify-between bg-green-600 text-white shadow-md">
-  <div class="">TIKAKLA</div>
+  <p class="icon-title">TIKAKLA</p>
   <nav>
     <ul class="flex">
       <li class="hover:text-gray-600 cursor-pointer">PRODUITS</li>
@@ -12,11 +12,19 @@
 
 
 <header class="mobile-header flex items-center justify-between bg-green-600 text-white shadow-md fixed top-0 w-full px-5 py-6 font-bold uppercase text-sm font-[Poppins,sans-serif] z-[3000]">
-  <div>TIKAKLA</div>
-  <button class="lg:hidden text-2xl cursor-pointer" id="hamburger-menu">
+  <p class="icon-title">TIKAKLA</p>
+  <button class="lg:hidden text-2xl cursor-pointer" id="hamburger-menu" (click)="toggleMenuClass(mobile)">
     ☰
   </button>
 </header>
+<nav #mobile class="desactive-mobile-nav shadow-md">
+  <ul>
+    <li class="mobile-menu-item cursor-pointer mobile-item-bar">Produits</li>
+    <li class="mobile-menu-item cursor-pointer mobile-item-bar">Achats</li>
+    <li class="mobile-menu-item cursor-pointer mobile-item-bar">Ventes</li>
+    <li class="mobile-menu-item cursor-pointer">Stock</li>
+  </ul>
+</nav>
 
 
 <div class="remain">

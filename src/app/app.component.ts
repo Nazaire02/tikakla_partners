@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,11 +8,18 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit{
+  //@ViewChild('mobile') mobile!: ElementRef;
   isHumbergerMenu: boolean= false;
+
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {}
 
-  hamburger(){
-    this.isHumbergerMenu = !this.isHumbergerMenu
+  toggleMenuClass(element: HTMLElement) {
+    if (element.classList.contains('active-mobile-nav')) {
+      this.renderer.removeClass(element, 'active-mobile-nav');
+    } else {
+      this.renderer.addClass(element, 'active-mobile-nav');
+    }
   }
 }
